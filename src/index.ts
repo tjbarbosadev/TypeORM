@@ -7,6 +7,7 @@ import express from 'express';
 import { createClientRouter } from './routes/create_client';
 import { createBankerRouter } from './routes/create_bank';
 import { createTransactionRouter } from './routes/create_transaction';
+import { connectBankerToClientRouter } from './routes/connect_banker_to_client';
 
 const app = express();
 
@@ -29,7 +30,12 @@ const main = async () => {
     console.log('Connection to postgres sucessfully');
 
     app.use(express.json());
-    app.use(createClientRouter, createBankerRouter, createTransactionRouter);
+    app.use(
+      createClientRouter,
+      createBankerRouter,
+      createTransactionRouter,
+      connectBankerToClientRouter
+    );
     app.listen(3000, () => {
       console.log('Application running on port 3000');
     });

@@ -18,7 +18,7 @@ export class Client extends Person {
   } | null;
 
   @Column({ type: 'text', array: true, nullable: true })
-  family_members: string[] | null;
+  family_members: string[];
 
   @CreateDateColumn()
   created_at: Date;
