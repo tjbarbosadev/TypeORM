@@ -2,6 +2,7 @@ import { DataSource } from 'typeorm';
 import dotenv from 'dotenv';
 import { Client } from './entities/Client';
 import { Banker } from './entities/Banker';
+import { Transaction } from './entities/Transactions';
 
 dotenv.config();
 
@@ -12,7 +13,7 @@ const AppDataSource = new DataSource({
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  entities: [Client, Banker],
+  entities: [Client, Banker, Transaction],
   synchronize: true,
 });
 
