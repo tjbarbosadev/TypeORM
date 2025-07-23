@@ -1,0 +1,22 @@
+{
+  "name": "typeorm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tjbarbosadev/TypeORM.git",
+  "author": "Thiago Barbosa <tjbarbosa.dev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.25",
+    "typescript": "^5.8.3"
+  }
+}
