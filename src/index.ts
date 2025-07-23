@@ -8,6 +8,7 @@ import { createClientRouter } from './routes/create_client';
 import { createBankerRouter } from './routes/create_bank';
 import { createTransactionRouter } from './routes/create_transaction';
 import { connectBankerToClientRouter } from './routes/connect_banker_to_client';
+import { deleteClientRouter } from './routes/delete_client';
 
 const app = express();
 
@@ -34,7 +35,8 @@ const main = async () => {
       createClientRouter,
       createBankerRouter,
       createTransactionRouter,
-      connectBankerToClientRouter
+      connectBankerToClientRouter,
+      deleteClientRouter
     );
     app.listen(3000, () => {
       console.log('Application running on port 3000');
