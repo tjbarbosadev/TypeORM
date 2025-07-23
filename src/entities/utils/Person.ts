@@ -19,7 +19,4 @@ export class Person extends BaseEntity {
 
   @Column({ type: 'varchar', unique: true, length: 10 })
   card_number: string;
-
-  @Column({ type: 'numeric' })
-  balance: number;
 }
